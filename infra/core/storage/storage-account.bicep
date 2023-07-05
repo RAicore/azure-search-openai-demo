@@ -1,6 +1,12 @@
 param name string
 param location string = resourceGroup().location
-param tags object = {}
+param tags object = {
+  "ApplicationName": "ChatGPT",
+  "ApplicationOwner": "Rasool",
+  "BusinessUnit": "Group, IT",
+  "Environment": "NON-PROD",
+  "Site": "GO"
+}
 
 @allowed([ 'Hot', 'Cool', 'Premium' ])
 param accessTier string = 'Hot'
